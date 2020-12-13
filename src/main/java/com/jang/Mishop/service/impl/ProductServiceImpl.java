@@ -94,7 +94,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         PageHelper.startPage((byPage.getCurentId())- 1, byPage.getPageSize(), true);
         if(byPage.getCatgoryId()==0){
             QueryWrapper<Product> queryWrapper = new QueryWrapper<>();
-            list=productMapper.selectList(queryWrapper);
+            list=productMapper.selectList(queryWrapper);//
         }
         else {
             GetProByCatgIdReq getProByCatgIdReq = new GetProByCatgIdReq();
