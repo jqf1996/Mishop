@@ -1,4 +1,4 @@
-package com.jang.Mishop.vo;
+package com.jang.Mishop.vo.Cart;
 
 import lombok.Data;
 

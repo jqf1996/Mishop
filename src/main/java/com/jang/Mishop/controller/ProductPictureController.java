@@ -4,7 +4,7 @@ package com.jang.Mishop.controller;
 import com.jang.Mishop.entity.ProductPicture;
 import com.jang.Mishop.service.ProductPictureService;
 import com.jang.Mishop.util.ResultMessage;
-import com.jang.Mishop.vo.ProductPic;
+import com.jang.Mishop.vo.Product.ProductPic;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

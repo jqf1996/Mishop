@@ -2,7 +2,7 @@ package com.jang.Mishop.service;
 
 import com.jang.Mishop.entity.ProductPicture;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.jang.Mishop.vo.ProductPic;
+import com.jang.Mishop.vo.Product.ProductPic;
 
 import java.util.List;
 

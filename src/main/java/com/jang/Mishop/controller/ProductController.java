@@ -3,12 +3,11 @@ package com.jang.Mishop.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.jang.Mishop.entity.Product;
-import com.jang.Mishop.service.ProductPictureService;
 import com.jang.Mishop.service.ProductService;
 import com.jang.Mishop.util.ResultMessage;
-import com.jang.Mishop.vo.GetProByCatgIdReq;
-import com.jang.Mishop.vo.GetProByIdReq;
-import com.jang.Mishop.vo.GetProductByPage;
+import com.jang.Mishop.vo.Product.GetProByCatgIdReq;
+import com.jang.Mishop.vo.Product.GetProByIdReq;
+import com.jang.Mishop.vo.Product.GetProductByPage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

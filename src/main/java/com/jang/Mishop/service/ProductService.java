@@ -3,9 +3,9 @@ package com.jang.Mishop.service;
 import com.github.pagehelper.PageInfo;
 import com.jang.Mishop.entity.Product;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.jang.Mishop.vo.GetProByCatgIdReq;
-import com.jang.Mishop.vo.GetProByIdReq;
-import com.jang.Mishop.vo.GetProductByPage;
+import com.jang.Mishop.vo.Product.GetProByCatgIdReq;
+import com.jang.Mishop.vo.Product.GetProByIdReq;
+import com.jang.Mishop.vo.Product.GetProductByPage;
 
 import java.util.List;
 

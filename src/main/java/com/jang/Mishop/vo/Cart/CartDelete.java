@@ -1,12 +1,10 @@
-package com.jang.Mishop.vo;
+package com.jang.Mishop.vo.Cart;
 
 
 import lombok.Data;
 
 @Data
-public class CartNumReq {
-
+public class CartDelete {
     private int user_id;
     private int product_id;
-    private int product_num;
 }

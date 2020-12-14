@@ -3,7 +3,6 @@ package com.jang.Mishop.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jang.Mishop.entity.Product;
 import com.jang.Mishop.entity.ShoppingCart;
-import com.jang.Mishop.entity.User;
 import com.jang.Mishop.exception.ExceptionEnum;
 import com.jang.Mishop.exception.XmException;
 import com.jang.Mishop.mapper.ProductMapper;
@@ -11,7 +10,7 @@ import com.jang.Mishop.mapper.ShoppingCartMapper;
 import com.jang.Mishop.service.ShoppingCartService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jang.Mishop.util.ResultMessage;
-import com.jang.Mishop.vo.*;
+import com.jang.Mishop.vo.Cart.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
