@@ -4,6 +4,7 @@ package com.jang.Mishop.controller;
 import com.jang.Mishop.entity.Product;
 import com.jang.Mishop.service.CollectService;
 import com.jang.Mishop.util.ResultMessage;
+import com.jang.Mishop.vo.Collect.CoollectReq;
 import com.jang.Mishop.vo.Collect.GetcollectByidReq;
 import com.jang.Mishop.vo.Collect.GetcollextByidRes;
 import com.jang.Mishop.vo.Product.GetProByCatgIdReq;
@@ -43,6 +44,16 @@ public class CollectController {
     public ResultMessage getcollectByid(@RequestBody GetcollectByidReq getcollectByidReq){
         List<GetcollextByidRes> collect = collectService.getCollect(getcollectByidReq);
         resultMessage.success("200","查成功",collect);
+        return resultMessage;
+    }
+
+
+    @ApiOperation("用户收藏接口")
+
+    @PostMapping("/Usercollect")
+    public ResultMessage Usercollect(@RequestBody CoollectReq coollectReq){
+        collectService.AddCollect(coollectReq);
+        resultMessage.success("200","收藏/取消收藏成功");
         return resultMessage;
     }
 

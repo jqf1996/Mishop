@@ -46,8 +46,8 @@ public class CollectServiceImpl extends ServiceImpl<CollectMapper, Collect> impl
         queryWrapper.setEntity(collect);
         Collect selectOne=collectMapper.selectOne(queryWrapper);//先查询是否存在收藏
 
-        if(selectOne!=null){
-            collect.setCollectTime(new Date().getTime());
+        if(selectOne==null){
+            collect.setCollectTime(new Date().getTime());//设置时间 毫秒级别的
             collectMapper.insert(collect);
         }
         else {
@@ -61,7 +61,7 @@ public class CollectServiceImpl extends ServiceImpl<CollectMapper, Collect> impl
         Collect collect = new Collect();
         collect.setUserId(addCoollectReq.getUser_id());
         collect.setProductId(addCoollectReq.getProduct_id());
-        collect.setCollectTime(new Date().getTime());
+
 
         //执行取消
         QueryWrapper<Collect> queryWrapper = new QueryWrapper<>();
@@ -76,16 +76,19 @@ public class CollectServiceImpl extends ServiceImpl<CollectMapper, Collect> impl
         QueryWrapper<Collect> wrapper = new QueryWrapper<>();
         wrapper.setEntity(collect);
 
-        List<Collect> list = collectMapper.selectList(wrapper);
+        List<Collect> list = collectMapper.selectList(wrapper);//把用户收藏的产品，都放在list中
 
 
-        List<GetcollextByidRes> result = new ArrayList();
+        List<GetcollextByidRes> result = new ArrayList();//List返回类型是一个res实体
 
-        for (Collect c : list) {
+        for (Collect c : list) {  //遍历收藏的list
+//            QueryWrapper<Product> wrap = new QueryWrapper<>();
+//            wrap.eq("product_id",c.getProductId());
+//            Product product = productMapper.selectOne(wrap);
             Product product = productMapper.selectById(c.getProductId());
-            GetcollextByidRes res = new GetcollextByidRes();
+            GetcollextByidRes res = new GetcollextByidRes();//new一个返回实体
             BeanUtils.copyProperties(product,res);
-            result.add(res);
+            result.add(res);//list add
         }
 
 
