@@ -20,11 +20,11 @@ import java.util.List;
 @Service
 public class CarouselServiceImpl extends ServiceImpl<CarouselMapper, Carousel> implements CarouselService {
     @Autowired
-    private CarouselService carouselService;
+    private CarouselMapper carouselMapper;
 
     @Override
     public List<Carousel> getAllCarousel() {
-        List<Carousel> allCarousel = carouselService.getAllCarousel();
+        List<Carousel> allCarousel = carouselMapper.selectList(null);
         return allCarousel;
 
     }
